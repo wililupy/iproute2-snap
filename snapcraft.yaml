@@ -1,0 +1,137 @@
+name: iproute2
+version: '4.8.0'
+summary: This is a set of utilities for Linux networking.
+description: Iproute2 is a collection of utilities for controlling TCP / IP networking and traffic control in Linux.
+grade: stable
+confinement: strict
+
+parts:
+  iproute2:
+    plugin: make
+    source: git://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git
+    source-type: git
+    build-packages: 
+      - libdb5.3-dev 
+      - texlive-latex-base 
+      - texlive-binaries 
+      - psutils
+apps:
+  ip:
+    command: sbin/ip
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  tc:
+    command: sbin/tc
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  arpd:
+    command: sbin/arpd
+    plugs: 
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  ctstat:
+    command: sbin/ctstat
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  ifcfg:
+    command: sbin/ifcfg
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  nstat:
+    command: sbin/nstat
+    plugs: 
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  routel:
+    command: sbin/routel
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  rtmon:
+    command: sbin/rtmon
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  rtstat:
+    command: sbin/rtstat
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  bridge:
+    command: sbin/bridge
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  genl:
+    command: sbin/genl
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  ifstat:
+    command: sbin/ifstat
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  lnstat:
+    command: sbin/lnstat
+    plugs: 
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  routef:
+    command: sbin/routef
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  rtacct:
+    command: sbin/rtacct
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  rtpr:
+    command: sbin/rtpr
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  ss:
+    command: sbin/ss
+    plugs: 
+       - network
+       - network-bind
+       - network-control
+       - network-observe
