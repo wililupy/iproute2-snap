@@ -15,6 +15,9 @@ parts:
       - texlive-latex-base 
       - texlive-binaries 
       - psutils
+      - build-essential
+      - bison
+      - flex
 apps:
   ip:
     command: sbin/ip
