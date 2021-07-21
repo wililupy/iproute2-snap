@@ -1,4 +1,4 @@
-name: iproute2
+name: iproute2-snap
 version: '5.13.0'
 summary: This is a set of utilities for Linux networking.
 description: Iproute2 is a collection of utilities for controlling TCP / IP networking and traffic control in Linux.
