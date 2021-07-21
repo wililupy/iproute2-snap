@@ -1,20 +1,20 @@
 name: iproute2
-version: '4.8.0'
+version: '5.13.0'
 summary: This is a set of utilities for Linux networking.
 description: Iproute2 is a collection of utilities for controlling TCP / IP networking and traffic control in Linux.
+base: core20
 grade: stable
 confinement: strict
 
 parts:
   iproute2:
     plugin: make
-    source: git://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git
+    source: git://git.kernel.org/pub/scm/network/iproute2/iproute2.git
     source-type: git
+    source-tag: v5.13.0
     build-packages: 
       - libdb5.3-dev 
-      - texlive-latex-base 
-      - texlive-binaries 
-      - psutils
+      - libmnl-dev
       - build-essential
       - bison
       - flex
