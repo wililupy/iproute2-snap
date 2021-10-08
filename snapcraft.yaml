@@ -1,5 +1,5 @@
 name: iproute2-snap
-version: '5.14.0'
+version: git
 summary: This is a set of utilities for Linux networking.
 description: Iproute2 is a collection of utilities for controlling TCP / IP networking and traffic control in Linux.
 base: core20
@@ -9,9 +9,8 @@ confinement: strict
 parts:
   iproute2:
     plugin: make
-    source: git://git.kernel.org/pub/scm/network/iproute2/iproute2.git
+    source: git://git.kernel.org/pub/scm/network/iproute2/iproute2-next.git
     source-type: git
-    source-tag: v5.14.0
     build-packages: 
       - libdb5.3-dev 
       - libmnl-dev
