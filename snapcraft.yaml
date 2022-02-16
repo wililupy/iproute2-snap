@@ -47,13 +47,6 @@ apps:
        - network-bind
        - network-control
        - network-observe
-  ifcfg:
-    command: sbin/ifcfg
-    plugs:
-       - network
-       - network-bind
-       - network-control
-       - network-observe
   nstat:
     command: sbin/nstat
     plugs: 
