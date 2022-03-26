@@ -110,5 +110,12 @@ apps:
        - network-bind
        - network-control
        - network-observe
-  
+  ifstat:
+     command: sbin/ifstat
+     plugs:
+        - network
+        - network-bind
+        - network-control
+        - network-observe
+        
         
