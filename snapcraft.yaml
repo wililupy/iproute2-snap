@@ -110,25 +110,5 @@ apps:
        - network-bind
        - network-control
        - network-observe
-  tipc:
-     command: sbin/tipc
-     plugs:
-        - network
-        - network-bind
-        - network-control
-        - network-observe
-  vdpa:
-     command: sbin/tipc
-     plugs:
-        - network
-        - network-bind
-        - network-control
-        - network-observe
-  rdma:
-     command: sbin/rdma
-     plugs: 
-        - network
-        - network-bind
-        - network-control
-        - network-observe
+  
         
