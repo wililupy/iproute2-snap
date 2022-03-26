@@ -111,7 +111,7 @@ apps:
        - network-control
        - network-observe
   dcb:
-     command: sbin/dcb
+     command: usr/sbin/dcb
      plugs:
         - network
         - network-bind
