@@ -110,13 +110,6 @@ apps:
        - network-bind
        - network-control
        - network-observe
-  dcb:
-     command: usr/sbin/dcb
-     plugs:
-        - network
-        - network-bind
-        - network-control
-        - network-observe
   devlink:
      command: sbin/devlink
      plugs:
