@@ -103,13 +103,6 @@ apps:
        - network-bind
        - network-control
        - network-observe
-  rtpr:
-    command: sbin/rtpr
-    plugs:
-       - network
-       - network-bind
-       - network-control
-       - network-observe
   ss:
     command: sbin/ss
     plugs: 
