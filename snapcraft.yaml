@@ -11,7 +11,7 @@ parts:
     plugin: make
     source: git://git.kernel.org/pub/scm/network/iproute2/iproute2.git
     source-type: git
-    source-tag: v5.16.0
+    source-tag: v5.17.0
     build-packages: 
       - libdb5.3-dev 
       - libmnl-dev
@@ -89,13 +89,6 @@ apps:
        - network-bind
        - network-control
        - network-observe
-  ifstat:
-    command: sbin/ifstat
-    plugs:
-       - network
-       - network-bind
-       - network-control
-       - network-observe
   lnstat:
     command: sbin/lnstat
     plugs: 
@@ -124,3 +117,39 @@ apps:
        - network-bind
        - network-control
        - network-observe
+  dcb:
+     command: sbin/dcb
+     plugs:
+        - network
+        - network-bind
+        - network-control
+        - network-observe
+  devlink:
+     command: sbin/devlink
+     plugs:
+        - network
+        - network-bind
+        - network-control
+        - network-observe
+  tipc:
+     command: sbin/tipc
+     plugs:
+        - network
+        - network-bind
+        - network-control
+        - network-observe
+  vdpa:
+     command: sbin/tipc
+     plugs:
+        - network
+        - network-bind
+        - network-control
+        - network-observe
+  rdma:
+     command: sbin/rdma
+     plugs: 
+        - network
+        - network-bind
+        - network-control
+        - network-observe
+        
