@@ -103,13 +103,6 @@ apps:
        - network-bind
        - network-control
        - network-observe
-  routef:
-    command: sbin/routef
-    plugs:
-       - network
-       - network-bind
-       - network-control
-       - network-observe
   rtacct:
     command: sbin/rtacct
     plugs:
