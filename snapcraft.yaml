@@ -1,8 +1,8 @@
 name: iproute2-snap
-version: '6.0'
+version: '6.0.0'
 summary: This is a set of utilities for Linux networking.
 description: Iproute2 is a collection of utilities for controlling TCP / IP networking and traffic control in Linux.
-base: core22
+base: core20
 grade: stable
 confinement: strict
 
