@@ -139,7 +139,7 @@ apps:
        - network-bind
        - network-control
        - network-observe
-   tipc:
+  tipc:
      command: sbin/tipc
      plugs:
        - network
