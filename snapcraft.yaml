@@ -135,17 +135,14 @@ apps:
   ifstat:
      command: sbin/ifstat
      plugs:
-        - network
-        - network-bind
-        - network-control
-        - network-observe
+       - network
+       - network-bind
+       - network-control
+       - network-observe
    tipc:
      command: sbin/tipc
      plugs:
-        - network
-        - network-bind
-        - network-control
-        - network-observe
-   
-        
-        
+       - network
+       - network-bind
+       - network-control
+       - network-observe
