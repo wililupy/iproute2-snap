@@ -1,8 +1,8 @@
 name: iproute2-snap
-version: '5.19.0'
+version: '6.0'
 summary: This is a set of utilities for Linux networking.
 description: Iproute2 is a collection of utilities for controlling TCP / IP networking and traffic control in Linux.
-base: core20
+base: core22
 grade: stable
 confinement: strict
 
@@ -11,17 +11,32 @@ parts:
     plugin: make
     source: git://git.kernel.org/pub/scm/network/iproute2/iproute2.git
     source-type: git
-    source-tag: v5.19.0
+    source-tag: v6.0.0
     build-packages: 
       - libdb5.3-dev 
       - libmnl-dev
       - build-essential
       - bison
       - flex
+      - pkg-config
 apps:
   ip:
     command: sbin/ip
     plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  dcb:
+    command: sbin/dcb
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+  devlink:
+    command: sbin/devlink
+    plugs: 
        - network
        - network-bind
        - network-control
@@ -75,6 +90,13 @@ apps:
        - network-bind
        - network-control
        - network-observe
+  rdma:
+    command: sbin/rdma
+    plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
   bridge:
     command: sbin/bridge
     plugs:
@@ -117,5 +139,13 @@ apps:
         - network-bind
         - network-control
         - network-observe
+   tipc:
+     command: sbin/tipc
+     plugs:
+        - network
+        - network-bind
+        - network-control
+        - network-observe
+   
         
         
