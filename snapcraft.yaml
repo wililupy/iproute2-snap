@@ -9,8 +9,7 @@ confinement: strict
 parts:
   iproute2:
     plugin: make
-    # source: git://git.kernel.org/pub/scm/network/iproute2/iproute2.git
-    source: https://kernel.googlesource.com/pub/scm/network/iproute2/iproute2
+    source: https://git.kernel.org/pub/scm/network/iproute2/iproute2
     source-type: git
     source-tag: v6.1.0
     build-packages: 
