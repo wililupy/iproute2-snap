@@ -3,7 +3,7 @@ version: '6.10.0'
 license: GPL-2.0-only
 summary: This is a set of utilities for Linux networking.
 description: Iproute2 is a collection of utilities for controlling TCP / IP networking and traffic control in Linux.
-base: core22 
+base: core24 
 grade: stable
 confinement: strict
 
