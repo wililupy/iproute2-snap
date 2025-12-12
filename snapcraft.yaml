@@ -171,3 +171,10 @@ apps:
        - network-bind
        - network-control
        - network-observe
+  netshaper:
+     command: sbin/netshaper
+     plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
