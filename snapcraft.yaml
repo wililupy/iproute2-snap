@@ -178,3 +178,11 @@ apps:
        - network-bind
        - network-control
        - network-observe
+  dpll:
+     command: sbin/dpll
+     plugs:
+       - network
+       - network-bind
+       - network-control
+       - network-observe
+       
